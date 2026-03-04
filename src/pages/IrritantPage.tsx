@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { IRRITANTS } from '../types';
 import { USE_CASES } from '../data/usecases';
 import BackButton from '../components/BackButton';
+import PageTopBar from '../components/PageTopBar';
 
 const containerVariants = {
   hidden: {},
@@ -36,6 +37,7 @@ export default function IrritantPage() {
           transition={{ duration: 0.4 }}
           className="mb-8"
         >
+          <PageTopBar />
           <BackButton to="/" label="Accueil" />
           <div className="mt-6">
             <div

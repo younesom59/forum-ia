@@ -5,6 +5,7 @@ import { USE_CASES } from '../data/usecases';
 import { SERVICES, IRRITANTS, STATUS_CONFIG, type Status } from '../types';
 import UseCaseCard from '../components/UseCaseCard';
 import BackButton from '../components/BackButton';
+import PageTopBar from '../components/PageTopBar';
 
 export default function UseCasesListPage({ filterType }: { filterType: 'service' | 'irritant' }) {
   const { id } = useParams<{ id: string }>();
@@ -78,6 +79,7 @@ export default function UseCasesListPage({ filterType }: { filterType: 'service'
           transition={{ duration: 0.4 }}
           className="mb-6"
         >
+          <PageTopBar />
           <BackButton to={backTo} label={backLabel} />
 
           <div className="mt-6">

@@ -4,6 +4,7 @@ import { USE_CASES } from '../data/usecases';
 import { SERVICES, IRRITANTS, STATUS_CONFIG } from '../types';
 import StatusBadge from '../components/StatusBadge';
 import BackButton from '../components/BackButton';
+import PageTopBar from '../components/PageTopBar';
 import { useFavorites } from '../context/FavoritesContext';
 
 const STATUS_PERCENT: Record<string, number> = {
@@ -96,6 +97,7 @@ export default function UseCaseDetailPage() {
         transition={{ duration: 0.4 }}
         className="relative z-10 max-w-3xl mx-auto px-6 pt-8 pb-4"
       >
+        <PageTopBar />
         {/* Back + Favorite row */}
         <div className="flex items-center justify-between gap-3 flex-wrap">
           <BackButton />

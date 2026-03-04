@@ -4,6 +4,7 @@ import { useFavorites } from '../context/FavoritesContext';
 import { USE_CASES } from '../data/usecases';
 import UseCaseCard from '../components/UseCaseCard';
 import BackButton from '../components/BackButton';
+import PageTopBar from '../components/PageTopBar';
 
 export default function FavoritesPage() {
   const { favorites, toggle } = useFavorites();
@@ -26,6 +27,7 @@ export default function FavoritesPage() {
           transition={{ duration: 0.4 }}
           className="mb-8"
         >
+          <PageTopBar hideFavBadge />
           <BackButton to="/" label="Accueil" />
           <div className="mt-6">
             <div
